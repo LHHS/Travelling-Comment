@@ -1,48 +1,237 @@
-<!-- home.html -->
-
 <!DOCTYPE html>
-<html>
+{% load staticfiles %}
+<html lang="en">
+
 <head>
+   <style>
+    *{ margin:0px; padding:0px; border:none}
+    </style>    
+    <!--meta definition-->
     <meta charset="utf-8">
-    <title>NTUEE is god</title>
-    <link href="//fonts.googleapis.com/css?family=Lemon" rel="stylesheet" type="text/css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//djangogirlstaipei.github.io/assets/css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div class="header">
-        <h1 class="site-title text-center">
-            <a href="/">NTUEE is God</a>
-        </h1>
-    </div>
-    <div class="container">
-        {% for post in post_list %}
-        <div class="post-wrapper">
-            <div class="post">
-                <div class="post-heading">
-                    <h2 class="title">
-							<a href="{% url 'post_detail' id=post.id %}">{{ post.title }}</a>
-						</h2>
-                    <div class="date">{{ post.created_at|date:"Y / m / d" }}</div>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--{{title}}-->
+    <meta name="description" content="Travelling Comment">
+	<!--{{Author}}-->
+    <meta name="author" content="LHHS" >
+	<!--{{title}}-->
+    <meta property="og:title" content="The best travelling sharing platform" />
+	<!--Backgound image imugr url-->
+    <meta property="og:image" content="http://g.udn.com.tw/upfiles/B_HS/hsr123/PSN_PHOTO/395/f_12236395_1.jpg"/>
+    <meta property="og:site_name" content="Travelling Comment"/>
+    <meta property="og:description" content="Share your awesome journey"/>
+	<!--header show-->
+	<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+	<!--title-->
+    <title>Travelling Comment</title>
+    <!-- Bootstrap Core CSS -->
+	<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'bootstrap/css/animate.css' %} " rel="stylesheet">
+    <!-- Custom CSS -->
+	<link href="{% static 'bootstrap/css/landing-page.css' %}" rel="stylesheet">
+	<link href="{% static 'bootstrap/stylesheets/style.css' %}" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+            <div class="container topnav">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+
+                    </button> <a class="navbar-brand topnav" href="#">
+						<i class="fa fa-home fa-lg">&nbsp;&nbsp;Home</i></a>
                 </div>
-                {% if post.photo %}
-                <div class="thumbnail">
-                    <img src="{{ post.photo }}" alt="">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+						<li><a href="#sign_up"><i class="fa fa-pencil">&nbsp;&nbsp;Sign Up</i></a></li>
+						<li><a href="#register"<i class="fa fa-list">&nbsp;&nbsp;Register</i></a></li>
+                        <li> <a href="#contact"><i class="fa fa-facebook-square">&nbsp;&nbsp;Contact us</i></a> </li>
+                    </ul>
                 </div>
-                {% else %}
-                <div class="thumbnail thumbnail-default"></div>
-                {% endif %}
-                <div class="post-content read-more-block">
-                    {{ post.content }}
-                </div>
-                <div class="post-footer">
-					<a class="read-more" href="{% url 'post_detail' id=post.id %}">
-						Read More <i class="fa fa-arrow-right"></i>
-					</a>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- Header --> <a name="about"></a>
+
+        <div class="intro-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="intro-message">
+							<h1 class="h1-title animated bounce"><font color="#FFFF00">Travelling Comment</font></h1>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- /.container -->
         </div>
-        {% endfor %}
-    </div>
+        <!-- /.intro-header -->
+        <!-- Page Content -->
+
+        <a name="search"></a>
+		<h1><font size="70px">Take a look at some fantasy journey</font></h1>
+        <div class="container" id="signup-container">
+            <hr class="section">
+			<div class="row">
+					<form role="form">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label for="InputName">Travelling Days</label>
+								<div class="input-group input-group-lg">
+								<select class="form-control">
+									<option value="one">1</option>
+									<option value="two">2</option>
+									<option value="three">3</option>
+									<option value="four">4</option>
+									<option value="five">5</option>
+								</select>
+									<!--<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>-->
+									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="InputMessage">Search Location</label>
+								<div class="input-group input-group-lg">
+									<textarea name="InputMessage" id="InputMessage" class="form-control" placeholder="Kaohsiung" rows="1" required></textarea>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-screenshot"></span></span>
+								</div>
+								</br>
+							</div>
+							<input type="submit" name="search" id="submit" value="Search !" class="btn btn-info pull-right">
+						</div>
+					</form>
+				</div>
+</div>
+			<!--<form class="form-horizontal" role="form">-->
+			  <!--<div class="form-group">-->
+				<!--<label class="control-label col-sm-2" for="email">Email:</label>-->
+				<!--<div class="col-sm-10">-->
+				  <!--<input type="email" class="form-control" id="email" placeholder="Enter email">-->
+				<!--</div>-->
+			  <!--</div>-->
+			  <!--<div class="form-group">-->
+				<!--<label class="control-label col-sm-2" for="pwd">Password:</label>-->
+				<!--<div class="col-sm-10"> -->
+				  <!--<input type="password" class="form-control" id="pwd" placeholder="Enter password">-->
+				<!--</div>-->
+			  <!--</div>-->
+			  <!--<div class="form-group"> -->
+				<!--<div class="col-sm-offset-2 col-sm-10">-->
+				  <!--<div class="checkbox">-->
+					<!--<label><input type="checkbox"> Remember me</label>-->
+				  <!--</div>-->
+				<!--</div>-->
+			  <!--</div>-->
+			  <!--<div class="form-group"> -->
+				<!--<div class="col-sm-offset-2 col-sm-10">-->
+				  <!--<button type="submit" class="btn btn-default">Submit</button>-->
+				<!--</div>-->
+			  <!--</div>-->
+			<!--</form>-->
+        </div>
+        <!--registerate for the activity end-->
+        <!--contact info-->	<a name="contact"></a>
+
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+						<h2><font color="#FFFF00">Connect to us</font></h2>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-inline banner-social-buttons">
+                            <li> <a href="https://www.facebook.com/ntubwyouth.tw?fref=ts" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.banner -->
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-inline">
+                            <li> <a href="#">Home</a>
+
+                            </li>
+                            <li class="footer-menu-divider">&sdot;</li>
+                            <li> <a href="#search">Search</a>
+
+                            </li>
+                            <li class="footer-menu-divider">&sdot;</li>
+                            <li> <a href="#contact">Contact</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Map Madal-->
+        <div class="modal fade" id="locMap">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                        </button>
+                         <h4 class="modal-title">位置</h4>
+
+                    </div>
+                    <div class="modal-body">
+						<img src="{% static 'img/Boya.jpg' %}" width="100%" height="100%">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">知道了</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+      
+    <!--JavaScript-->
+
+    <!-- jQuery -->
+	<script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+	<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    
+	<script src="{% static 'bootstrap/js/myHelper.js' %}"></script>
+    <!--skrollr-->
+	<script src="{% static 'bootstrap/js/skrollr.js' %}"></script>
+    <script type="text/JavaScript">
+    resizePages();
+    if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    var sk = skrollr.init({forceHeight:false});
+    skrollr.menu.init(sk);
+    }
+    $(function(){
+        $(window).resize(function(e) {
+            resizePages();
+            sk.refresh();
+        });
+    });
+    </script>
+	<script src="{% static 'bootstrap/js/skrollr.menu.js' %}"></script>
 </body>
+
 </html>
+

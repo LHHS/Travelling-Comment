@@ -13,5 +13,4 @@ urlpatterns = patterns('',
     url(r'^$',home),
     url(r'^host/(?P<id>\d+)/$',post_detail, name='post_detail'),
     # 代表：抓出一個以上阿拉伯數字，並把抓出來的東西取名為 id。
-    url(r'^index',index),
 )
