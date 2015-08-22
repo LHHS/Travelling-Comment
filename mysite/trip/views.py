@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from datetime import datetime
-
+from trip.models import ContactForm
 
 def home(request):
     if request.method == 'POST': # If the form has been submitted...

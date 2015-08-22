@@ -8,7 +8,6 @@ class Post(models.Model):
     required_time = models.IntegerField()
     location = models.CharField(max_length=100)
     created_date = models.DateTimeField(auto_now_add=True)
-    published_date = models.DateTimeField(auto_now_add=True)
 
 
 class Block(models.Model):
@@ -16,7 +15,7 @@ class Block(models.Model):
     comment = models.TextField()
     photo = models.URLField()
     location = models.CharField(max_length=100)
-    rating = models.DecimalField()
+    rating = models.DecimalField(max_digits=1, decimal_places=1)
 
 class ContactForm(forms.Form):
     subject=forms.CharField(max_length=100)
