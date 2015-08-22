@@ -17,6 +17,8 @@ def form(request):
     return render(request,
             'demo/form.html',
             {'post_list': post_list})
+def post(request):
+    return render(request,'post.html',{'post':post})
 
 def post_detail(request, id):
     post = Post.objects.get(id=id)

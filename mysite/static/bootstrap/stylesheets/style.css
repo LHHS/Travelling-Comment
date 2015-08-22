@@ -1,8 +1,11 @@
 .event-desc-p{margin-top:40px;font-size:24px;line-height:32px}#event-desc-row{margin-top:40px}#timeline-wrapper{text-align:center}#timeline-wrapper2{text-align:center}.time-vertex{position:relative;display:inline-block;height:80px;width:80px;border-radius:40px;background-color:#CCC;border:#333 6px solid;font-size:24px;line-height:72px;white-space:nowrap}.vertex{display:none}.vertex-style line{stroke:#000;stroke-width:10px}.vertex-style circle{stroke:#06143c;stroke-width:5px;fill:#fff}.vertex-style .circle2{stroke:#0c2878}.svg-wrapper{height:100px}.svg-wrapper>svg{display:inline-block;height:100%}.event-time-wrapper{height:100px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:flex-end;justify-content:flex-end}@media screen and (max-width: 991px){.event-time-wrapper{-webkit-justify-content:center;justify-content:center;height:auto;margin-top:35px}}.event-time{border:2px solid #1932b4;border-radius:4px;font-size:28px;padding:8px 5px;width:120px}.time-desc{height:98px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:space-between;justify-content:space-between;font-size:28px}@media screen and (max-width: 991px){.time-desc{-webkit-justify-content:center;justify-content:center;-webkit-flex-wrap:wrap;flex-wrap:wrap;height:auto;margin-top:10px;margin-bottom:20px}}.time-desc2{height:98px;font-size:28px}.event-desc{min-width:240px;padding:12px 20px;font-size:30px;min-width:0px;border:0px;padding:0px 15px}.event-desc2{padding:12px 20px;font-size:30px;min-width:45%;border:0px;padding:0px 15px;text-align:left}@media screen and (max-width: 991px){.event-desc2{text-align:center;width:100%}}
+#event-desc-row{margin-top:40px}
+.time-title{font-size:36px;font-weight:900;margin-bottom:20px}
 #signup-up{height:0px}.signup-flex{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center}
 #signup-container{text-align:center;overflow:hidden;margin-bottom:100px}#signup-button{font-size:40px}#signup-up{height:0px}.signup-flex{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center}.signup-page-flex{min-height:50vh}#signup-page1{height:100%}#signup-page1-flex{height:100%;display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center}
 #signup-button{font-size:40px}
-    .h1-title{
+
+.h1-title{
         -webkit-animation-duration: 2.0s;
     }
     .h1-subtitle{

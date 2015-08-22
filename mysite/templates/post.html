@@ -11,19 +11,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--{{title}}-->
-    <meta name="description" content="陳良基副校長演講">
+    <meta name="description" content="Travelling Comment">
 	<!--{{Author}}-->
-    <meta name="author" content="sunprinceS" >
+    <meta name="author" content="LHHS" >
 	<!--{{title}}-->
-    <meta property="og:title" content="活出內在的英雄" />
+    <meta property="og:title" content="The best travelling sharing platform" />
 	<!--Backgound image imugr url-->
-    <meta property="og:image" content="http://tedxtaipei.com/wp-content/uploads/2012/10/future-edu-6.jpg"/>
-    <meta property="og:site_name" content="福青社演講"/>
-    <meta property="og:description" content="沒有最好的自己  只有更好的自己"/>
+    <meta property="og:image" content="http://g.udn.com.tw/upfiles/B_HS/hsr123/PSN_PHOTO/395/f_12236395_1.jpg"/>
+    <meta property="og:site_name" content="Travelling Comment"/>
+    <meta property="og:description" content="Share your awesome journey"/>
 	<!--header show-->
-    <!--<link rel="shortcut icon" href="{% static 'favicon.ico' %}">-->
+	<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
 	<!--title-->
-    <title>陳良基副校長演講</title>
+    <title>Travelling Comment</title>
     <!-- Bootstrap Core CSS -->
 	<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 	<link href="{% static 'bootstrap/css/animate.css' %} " rel="stylesheet">
@@ -36,8 +36,16 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     </head>
     <body>
+<!-- SVG template -->
+        <svg height="100" width="40" viewBox="0 0 40 100" class="vertex">
+          <g id="vertex-template" class="vertex-style">
+            <line x1="20" y1="0" x2="20" y2="100" />
+            <circle cx="20" cy="50" r="15"/>
+            <circle cx="20" cy="50" r="7" class="circle2"/>
+          </g>
+        </svg>
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse topnav" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
             <div class="container topnav">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -47,32 +55,14 @@
      <span class="icon-bar"></span>
 
                     </button> <a class="navbar-brand topnav" href="#">
-					<!--Author-->
-                        <i class="fa fa-home fa-lg">&nbsp;&nbsp;sunprinceS</i></a>
+						<i class="fa fa-home fa-lg">&nbsp;&nbsp;Home</i></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <!--dropdown setting--> <a href="#info" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list">&nbsp;&nbsp;演講資訊</i></a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a role="menuitem" href="#info-speecher" align="center">講者介紹</a>
-                                </li>
-                        </li>
-                        <li><a role="menuitem" href="#info-speech" align="center">關於演講</a>
-                        </li>
-                        </li>
-                        <li><a role="menuitem" href="#info-info" align="center">時間地點</a>
-                        </li>
-                        </ul>
-                        </li>
-                        <li> <a href="#register"><i class="fa fa-pencil">&nbsp;&nbsp;網路報名</i></a>
-
-                        </li>
-                        <li> <a href="#contact"><i class="fa fa-facebook-square">&nbsp;&nbsp;聯絡我們</i></a>
-
-                        </li>
+						<li><a href="#sign_up"><i class="fa fa-pencil">&nbsp;&nbsp;Sign Up</i></a></li>
+						<li><a href="#register"<i class="fa fa-list">&nbsp;&nbsp;Register</i></a></li>
+                        <li> <a href="#contact"><i class="fa fa-facebook-square">&nbsp;&nbsp;Contact us</i></a> </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -86,12 +76,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="intro-message">
-                            <!--<h1>活出內在的英雄</h1>-->
-                            <!--<h3>沒有最好的自己  只有更好的自己</h3>-->
-                             <h1 class="h1-title animated bounce">活出內在的英雄</h1>
-
-                             <h3 class="h1-subtitle animated pulse">沒有最好的自己  只有更好的自己</h3>
-
+							<h1 class="h1-title animated bounce"><font color="#FFFF00">Travelling Comment</font></h1>
                         </div>
                     </div>
                 </div>
@@ -99,110 +84,68 @@
             <!-- /.container -->
         </div>
         <!-- /.intro-header -->
-        <!-- Page Content -->	<a name="info"></a>
-        <a name="info-speecher"></a>
+        <!-- Page Content -->
 
-        <!--speecher introduction-->
-        <div class="content-section-a">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                         <h2 class="section-heading" data-800-top="opacity:0.2;transform:translateX(-50%);" data-100-top="opacity:1; transform:translateX(0%);">講者介紹</h2>
+        <a name="search"></a>
+		 <div class="row" id="event-desc-row">
 
-                         <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;陳副校長畢業於成大電機系，1986年獲得成大電機博士，為國內CAD領域第一位本土博士。目前是臺大講座教授及教育部國家講座。陳副校長的專長在於­數位影像訊號處理及其電路架構設計，擁有超過420篇著作和15項美國專利，並有近一百件技術移轉及技術協助兩家新創公司成功上市。</p>
-                         
-                         <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;陳副校長研究成果廣為國際肯定，曾多次擔任數位影像研究相關之IEEE期刊編輯，並曾多次獲邀出任國際學術年會之技術委員會主席。陳副校長積極鼓勵創新，他於2007年在台大­創立創意創業學程，至今該學程已成最受台大學生歡迎的學程之一。</p>
-                    </div>
-                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                        <img class="img-responsive" src="http://vp.ntu.edu.tw/VP/lgchen--1020909-01.jpg" alt="VicePresident Chen">
-                    </div>
-                </div>
+          <div class="row" id="event-item-row">
+            <div class="col-md-3 col-xs-12">
+              <div class="event-time-wrapper">
+                <p class="event-time">&nbsp;xxxxxx</p>
+              </div>
             </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.content-section-a -->
-        <!--speecher introduction end-->
-        <!--About the speech-->	<a name="info-speech"></a>
-
-        <div class="content-section-b">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                         <h2 class="section-heading" data-800-top="opacity:0.2;transform:translateX(50%);" data-100-top="opacity:1; transform:translateX(0%);">關於演講</h2>
-
-                     <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大學階段應該如何培養自己的創造力，又該如何應用到實際層面，成為真的帶得走的能力呢？</p>
- 							<p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;應當要具備怎樣的學習態度，才能因應現在競爭激烈的環境。還有碰到困難時，應該用怎樣的態度去解決呢？</p>
-							<!--<p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;處於這個個人在世界中定位愈來愈渺小的時代，我們又該抱持著何種心態去面對呢？</p>-->
- 							<p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這次，我們邀請到陳良基副校長，與我們分享他的生命故事，相信你可以從這次演講，找到給自己的答案！</p>
-
-                    </div>
-                    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-						<img class="img-responsive" src="{% static 'img/SpeechChen.jpg' %}" alt="speech" height="100%">
-                    </div>
-                </div>
+            <div class="col-md-1 hidden-xs hidden-sm">
+              <div class="svg-wrapper">
+                <svg viewbox="0 0 40 100">
+                  <use xlink:href="#vertex-template" class="vertex-style">
+                </svg>
+              </div>
             </div>
-            <!-- /.container -->
-            <!--about the speech end-->
-        </div>
-        <!--Info about the speech :time,location...etc-->	<a name="info-info"></a>
-
-        <div class="content-section-a">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                         <h2 class="section-heading" data-800-top="opacity:0.2;transform:translateX(-50%);" data-100-top="opacity:1; transform:translateX(0%);">時間地點</h2>
-
-                        <div class="col-md-offset-1 col-md-4 marginTop30 marginButtom30">
-                            <div class="info-animate" data-action="rubberBand">
-								<img src="{% static 'img/clock.png' %}" width="100%">
-                            </div>
-                            <p class="event-desc-p" align="center">2015/3/18 (三)
-                                <br>19:00 ~ 21:00</p>
-                        </div>
-                        <div class="col-md-offset-2 col-md-4 marginTop30 marginButtom30">
-                            <div class="info-animate" data-action="rubberBand">
-								<img src="{% static 'img/location.svg' %}" width="100%" id="info-loc" href="http://getbootstrap.com/css/#grid">
-                            </div>
-                            <p class="event-desc-p" align="center">台灣大學
-                                <br>博雅教學館103
-                                <br>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#locMap">地圖請按我</button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.container -->
+            <div class="col-md-8 col-xs-12 time-desc-wrapper">
+              <hr class="style-two" style="margin: 0;">
             </div>
-        </div>
-        <!--Info about the speech :time,location...etc end-->
-        <!--register for the activity-->	<a name="register"></a>
+          </div>
 
-        <div class="container" id="signup-container">
-            <hr class="section">
-            <div id="signup-page1">
-                <div class="clearfix"></div>
-                <div id="signup-page1-flex" class="signup-page-flex">
-                    <div id="signup-up"></div>
-                    <div id="signup-content"> <a href="https://docs.google.com/forms/d/1qh6eCS0cLoJ9dCXsdFMdSEmel6pqKgheclZonZl9GBk/viewform?usp=send_form"><button type="button" class="btn btn-primary" id="signup-button">  網路報名 </button></a>
-
-                    </div>
-                </div>
+          <div class="row" id="event-item-row">
+            <div class="col-md-3 col-xs-12">
+              <div class="event-time-wrapper">
+                <p class="event-time">Ping Xi</p>
+              </div>
             </div>
+            <div class="col-md-1 hidden-xs hidden-sm">
+              <div class="svg-wrapper">
+                <svg viewbox="0 0 40 100">
+                  <use xlink:href="#vertex-template" class="vertex-style">
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="event-item-row">
+            <div class="col-md-3 col-xs-12">
+              <div class="event-time-wrapper">
+                <p class="event-time">&nbsp;&nbsp;Home</p>
+              </div>
+            </div>
+            <div class="col-md-1 hidden-xs hidden-sm">
+              <div class="svg-wrapper">
+                <svg viewbox="0 0 40 100">
+                  <use xlink:href="#vertex-template" class="vertex-style">
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--registerate for the activity end-->
+      </div>
+    </div>
+		<!--registerate for the activity end-->
         <!--contact info-->	<a name="contact"></a>
 
         <div class="banner">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                         <h2>Connect to us</h2>
+						<h2><font color="#FFFF00">Connect to us</font></h2>
 
                     </div>
                     <div class="col-lg-6">
@@ -227,7 +170,7 @@
 
                             </li>
                             <li class="footer-menu-divider">&sdot;</li>
-                            <li> <a href="#info">Info</a>
+                            <li> <a href="#search">Search</a>
 
                             </li>
                             <li class="footer-menu-divider">&sdot;</li>
@@ -235,7 +178,6 @@
 
                             </li>
                         </ul>
-                        <p class="copyright text-muted small">Copyleft (ɔ) Bliss Wisdom Youth 2015</p>
                     </div>
                 </div>
             </div>
