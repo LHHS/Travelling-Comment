@@ -1,12 +1,21 @@
 from django.db import models
 from django import forms
 
+class Person(models.Model):
+    SHIRT_SIZES = (
+        ('S', 'Small'),
+        ('M', 'Medium'),
+        ('L', 'Large'),
+    )
+    name = models.CharField(max_length=60)
+    shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
+
 class Post(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=50)
     content = models.TextField(blank=True)
     photo = models.URLField(blank=True)
-    required_time = models.IntegerField()
-    location = models.CharField(max_length=100)
+    required_time = models.IntegerField(default=0)
+    location = models.CharField(max_length=50)
     created_date = models.DateTimeField(auto_now_add=True)
 
 

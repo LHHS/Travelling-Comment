@@ -11,17 +11,48 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Post',
+            name='Block',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, verbose_name='ID', serialize=False)),
-                ('title', models.CharField(max_length=100)),
-                ('content', models.TextField(blank=True)),
-                ('photo', models.URLField(blank=True)),
+                ('comment', models.TextField()),
+                ('photo', models.URLField()),
                 ('location', models.CharField(max_length=100)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('rating', models.DecimalField(decimal_places=1, max_digits=1)),
             ],
             options={
             },
             bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='Person',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, verbose_name='ID', serialize=False)),
+                ('name', models.CharField(max_length=60)),
+                ('shirt_size', models.CharField(max_length=1, choices=[('S', 'Small'), ('M', 'Medium'), ('L', 'Large')])),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='Post',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, verbose_name='ID', serialize=False)),
+                ('title', models.CharField(max_length=50)),
+                ('content', models.TextField(blank=True)),
+                ('photo', models.URLField(blank=True)),
+                ('required_time', models.IntegerField(default=0)),
+                ('location', models.CharField(max_length=50)),
+                ('created_date', models.DateTimeField(auto_now_add=True)),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.AddField(
+            model_name='block',
+            name='post',
+            field=models.ForeignKey(to='trips.Post'),
+            preserve_default=True,
         ),
     ]

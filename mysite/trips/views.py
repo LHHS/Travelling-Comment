@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from datetime import datetime
-from trips.models import Post
+from trips.models import *
 
 def hello_world(request):
     return render(request,
